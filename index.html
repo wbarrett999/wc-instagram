@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>William Instagram</title>
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     
 </head>
@@ -13,10 +14,10 @@
     <header>
         <div class="inner">
             <div class="header__logo">Instagram</div>
-            <div>
+            <div class="div">
                 <input type="text" placeholder="e.g. People">
             </div>
-            <div>
+            <div class="div">
                 <a href="#" class="button button--blue">Get the App</a>
                 <a href="#" class="button">Login</a>
             </div>
@@ -25,21 +26,57 @@
 
     <!-- User Profile Area -->
     <div class="profile">
-        <div class="inner inner__profile">
+        <div class="inner">
             <div class="profile__image">
                 <img src="http://unsplash.it/200?image=172" alt="">
             </div>
             <div class="profile__info">
                 <h2>Username</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quae recusandae dolor ab, necessitatibus voluptate.</p>
-                <a href="http://www.iwcc.edu">www.iwcc.edu</a>
-                <ul>
-                    <li>100 Posts</li>
-                    <li>789 Followers</li>
-                    <li>50 Following</li>
+                <a class="link" href="http://www.iwcc.edu">www.iwcc.edu</a>
+                <ul class="profile__meta">
+                    <li><span class="profile__bold">100</span> Posts</li>
+                    <li><span class="profile__bold">789</span> Followers</li>
+                    <li><span class="profile__bold">50</span> Following</li>
                 </ul>
             </div>
         </div>
     </div>
+    <div class="images">
+        <div class="inner">
+            <a href="#" class="image">
+                <img src="http://unsplash.it/300/?image=69" alt="">
+                <span class="image__cover">View Image</span>
+            </a>
+            <a href="#" class="image">
+                <img src="http://unsplash.it/300/?image=169" alt="">
+                <span class="image__cover">View Image</span>
+            </a>
+            <a href="#" class="image">
+                <img src="http://unsplash.it/300/?image=269" alt="">
+                <span class="image__cover">View Image</span>
+            </a>
+            <a href="#" class="image">
+                <img src="http://unsplash.it/300/?image=369" alt="">
+                <span class="image__cover">View Image</span>
+            </a>
+            <a href="#" class="image">
+                <img src="http://unsplash.it/300/?image=469" alt="">
+                <span class="image__cover">View Image</span>
+            </a>
+        </div>
+    </div>
+    <script>    
+        window.addEventListener('scroll', function(){
+            var distance = window.pageYOffset || document.documentElement.scrollTop
+            var header = document.querySelector('header')
+            if (distance > 200) {
+                header.classList.add('header--small')
+            }
+            else {
+                header.classList.remove('header--small')
+            }
+        })
+    </script>
 </body>
 </html>
