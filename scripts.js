@@ -52,7 +52,7 @@ const showFullImage = id => {
     //const fullImage = document.querySelector('.full img') //the img within the div
     const fullImage = fullContainer.querySelector('img') //the img within the div
     // Set the src of the fullImage to be the larger version of the image
-    fullImage.src = `http://unsplash.it/800/?image= ${id}`
+    fullImage.src = `https://unsplash.it/800/?image= ${id}`
     //remove the hidden class from the fullContainer to show it
     fullContainer.classList.remove('hidden')
 }
@@ -79,7 +79,7 @@ fullContainer.addEventListener('click', function(){
         */
 
 //Use fetch() to load remote data , then promises
-fetch('http://unsplash.it/list')
+fetch('https://unsplash.it/list')
 //.then(function(result){
 .then(result => {
     //console.log(result)
@@ -114,7 +114,7 @@ function addErrorEvents() {
     images.forEach(function(image,index){
         image.addEventListener('error', function(){
             console.log('ERROR')
-            this.src = `http://unsplash.it/300/?image=580`
+            this.src = `https://unsplash.it/300/?image=580`
         })
     })
     // console.log('ERROR!') when the event occurs
@@ -136,7 +136,7 @@ function populateImages(imageArray) {
         //                <span class="image__cover">View Image</span>
         //              </a>`
         const html = `<a href="#" class="image">
-                        <img src="http://unsplash.it/300/?image=${image.id}" 
+                        <img src="https://unsplash.it/300/?image=${image.id}" 
                         alt="${image.author} ${image.filename}">
                         <span class="image__cover">View Image</span>
                       </a>`
