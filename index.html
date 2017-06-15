@@ -44,30 +44,17 @@
     </div>
     <div class="images">
         <div class="inner">
-            <a href="#" class="image">
-                <img src="http://unsplash.it/300/?image=69" alt="">
-                <span class="image__cover">View Image</span>
-            </a>
-            <a href="#" class="image">
-                <img src="http://unsplash.it/300/?image=169" alt="">
-                <span class="image__cover">View Image</span>
-            </a>
-            <a href="#" class="image">
-                <img src="http://unsplash.it/300/?image=269" alt="">
-                <span class="image__cover">View Image</span>
-            </a>
-            <a href="#" class="image">
-                <img src="http://unsplash.it/300/?image=369" alt="">
-                <span class="image__cover">View Image</span>
-            </a>
-            <a href="#" class="image">
-                <img src="http://unsplash.it/300/?image=469" alt="">
-                <span class="image__cover">View Image</span>
-            </a>
+                        
         </div>
     </div>
-    <script>    
-        window.addEventListener('scroll', function(){
+    <!-- End of Images Area -->
+    <!-- Location for the full sized image -->
+    <div class="full hidden">
+        <img>
+    </div>
+    <script src="scripts.js">
+    //Create an event for when the window is scrolled    
+    /*window.addEventListener('scroll', function(){
             var distance = window.pageYOffset || document.documentElement.scrollTop
             var header = document.querySelector('header')
             if (distance > 200) {
@@ -77,6 +64,7 @@
                 header.classList.remove('header--small')
             }
         })
+    */
     </script>
 </body>
 </html>

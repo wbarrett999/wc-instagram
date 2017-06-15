@@ -34,7 +34,7 @@ body {
 }
 .image {
     position: relative;
-    line-height: 0;
+    display: inherit; /* replace original line-height: 0; */
     overflow: hidden;
 }
 .image__cover {
@@ -143,6 +143,26 @@ header {
 img {
     max-width: 100%;
 }
+
+/* styles for the full image container */
+.full {
+    /* Position it, change the width/height, background color */
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden {
+    display: none;
+    /*visibility: hidden;*/
+}
+
 
 @media(max-width: 1000px){
     .inner {

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code HTML</title>
+</head>
+<body>
+    <input type="text">
+    <button id="myButton">Click Me!</button>
+    <button id="myButton2">Demo!</button>
+
+    <script>
+        //var myButton = document.getElementById('myButton')
+        var myButton = document.querySelector('#myButton')
+        var myInput = document.querySelector('input')
+        myButton.addEventListener('click', function(){
+            //var message = 'You typed: ' + myInput.value
+            //console.log("It is working!", myInput.value)
+            var message = `myInput.value is equal to: ${myInput.value}`
+            console.log(message)
+        })
+
+        const name = 'William'
+        //let city = 'Council Bluffs'
+        var city = 'Council Bluffs'
+        if (city === 'Council Bluffs') {
+            var state = 'Iowa'
+        }
+        console.log(name, state)
+
+        /*** Fun with Funcitons ***/
+        //Make a function named getName with no parameters
+        function getName1() {
+
+        }
+
+        //Make the same function, but using "assignment" syntax
+        var getName2 = function() {
+
+        }
+
+        //Make a function using the assignment syntax. 
+        //Funciton name is addNumbers and two parameters, num1 and num2
+        //Have the function return the sum of the numbers
+        var num1 = 8
+        var num2 = 3
+        var addNumbers = function(num1, num2) {
+            //let sum = num1 + num2
+            //return sum
+            return num1 + num2 
+        }
+        console.log(addNumbers(num1,num2))
+
+        //Just like above, make a multNumbers function
+        //It is passed TWO parameters: num1, num2
+        //It returns the product of those numbers
+        /*var multNumbers = function(num1, num2) {
+            //let prod = num1 * num2
+            //return prod
+            return num1 * num2 
+        }*/
+        //Arrow function => is a fat arrow
+        var multNumbers = (num1, num2) => {
+            //let prod = num1 * num2
+            //return prod
+            return num1 * num2 
+        }
+        console.log(multNumbers(num1,num2))
+
+
+        //USING ARROW FUNCTIONS
+        // Make a function named double which is passed ONE parameter
+        // num1 and returns num * 2
+        var double = (num1) => {
+            return num1 * 2 
+        }
+        console.log('Should be 16 = ', double(num1))
+        // Make a triple function, just like double
+        // Here we will use the shorter syntax
+        // If one variable: no parenthesis are required
+        // if the only statement is a return statement,
+        // you  do not need curly braces or the "return" word
+        //var triple = (num1) => {
+        //    return num1 * 3
+        //}
+        var triple = num1 => num1 * 3
+        console.log('Should be 24 = ', triple(num1))
+
+        //Create a function for this
+        const mybutton2 = document.querySelector('#myButton2')
+        /*myButton2.addEventListener('click', function() {
+            console.log(this)
+        })*/
+        myButton2.addEventListener('click', () => {
+            console.log(this)
+        })
+    </script>
+</body>
+</html>

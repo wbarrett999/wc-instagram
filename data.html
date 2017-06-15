@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading Data</title>
+</head>
+<body>
+   <script>
+       //Use fetch() to load remote data , then promises
+       fetch('http://unsplash.it/list')
+        //.then(function(result){
+        .then(result => {
+            //console.log(result)
+            //result.json() //convert the text into JSON data
+            return result.json() //convert the text into JSON data and return or make available
+        })
+        .then(result => {
+            //console.log(result)
+            //Now that we have the data, we can work with it!
+            // Initializing an array with 20 random numbers
+            let randomArray = []
+            for(let i=0;i<20;i++) {
+                // Generate randdom numbers, randoms is the array
+                randomArray.push(Math.round(Math.random()*result.length))
+            }
+            let images = result.filter(image => {
+                return randomArray.includes(image.id)
+            })
+            console.log(randomArray,images)
+        })
+        /*.catch(error => {
+            console.log('Something went wrong!!!!')
+        })*/
+   </script> 
+</body>
+</html>
